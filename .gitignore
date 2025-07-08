@@ -1,0 +1,84 @@
+
+# Dependencies
+node_modules/
+.npm
+.yarn
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+.vite/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# System files
+.DS_Store
+Thumbs.db
+*.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary and backup files
+*.tmp
+*.temp
+*.bak
+*.backup
+backups/
+temp/
+tmp/
+
+# Archives and compressed files
+*.zip
+*.tar
+*.tar.gz
+*.gz
+*.7z
+*.rar
+
+# Screenshots and non-essential images
+screenshots/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+!client/public/images/*.webp
+!public/images/*.svg
+
+# Old/backup directories
+*_old/
+*_backup/
+client_old/
+server_old/
+shared_old/
+public_old/
+
+# Build artifacts and extracted files
+extracted_json_ld/
+static-site/
+
+# Replit specific (keep configs but exclude bloat)
+.replit.bak
+
+# Development artifacts
+*.cache
+.cache/
+coverage/
+.nyc_output/
+
+# Misc development files
+replit_agent/
+*.html
+!client/index.html
+!public/googlee964abc67dc1d83e.html
+*.md
+!README.md
