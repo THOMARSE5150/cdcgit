@@ -124,3 +124,7 @@ public/screenshots/
 *.db-wal
 *.db-shm
 prisma/migrations/
+
+*.png
+!client/assets/images/
+!client/assets/images/cdc_high_res_logo.png
