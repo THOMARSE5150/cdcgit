@@ -58,19 +58,16 @@ tmp/
 *.rar
 
 # =========================
-# Screenshots and general images (block all)
+# Screenshots and general images (block all except specific folders)
 screenshots/
+client/public/screenshots/
+public/screenshots/
 *.jpg
 *.jpeg
 *.gif
 *.bmp
 *.png
-
-# ✅ ALLOW header_logo.png only
-!client/
-!client/assets/
-!client/assets/images/
-!client/assets/images/header_logo.png
+!client/assets/images/**/*.png
 
 # Also allow these formats from public
 !client/public/images/*.webp
@@ -114,16 +111,3 @@ replit_agent/
 !public/googlee964abc67dc1d83e.html
 *.md
 !README.md
-# =========================
-# Final Additions for Replit-to-GitHub Safety
-# =========================
-client/public/screenshots/
-public/screenshots/
-*.sqlite
-*.db
-*.db-wal
-*.db-shm
-prisma/migrations/
-
-*.png
-!client/assets/images/**/*.png
