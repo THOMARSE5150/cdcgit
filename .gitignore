@@ -1,34 +1,44 @@
-
-
+# =========================
 # Dependencies
+# =========================
 node_modules/
 .npm
 .yarn
 yarn-error.log*
 
+# =========================
 # Build outputs
+# =========================
 dist/
 build/
 .vite/
 
+# =========================
 # Environment and secrets
+# =========================
 .env
 .env.*
 !.env.example
 
+# =========================
 # System files
+# =========================
 .DS_Store
 Thumbs.db
 *.log
 
+# =========================
 # IDE and editor files
+# =========================
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
+# =========================
 # Temporary and backup files
+# =========================
 *.tmp
 *.temp
 *.bak
@@ -37,7 +47,9 @@ backups/
 temp/
 tmp/
 
+# =========================
 # Archives and compressed files
+# =========================
 *.zip
 *.tar
 *.tar.gz
@@ -45,17 +57,28 @@ tmp/
 *.7z
 *.rar
 
-# Screenshots and non-essential images
+# =========================
+# Screenshots and general images (block all)
 screenshots/
-*.png
 *.jpg
 *.jpeg
 *.gif
 *.bmp
+*.png
+
+# ✅ ALLOW header_logo.png only
+!client/
+!client/assets/
+!client/assets/images/
+!client/assets/images/header_logo.png
+
+# Also allow these formats from public
 !client/public/images/*.webp
 !public/images/*.svg
 
+# =========================
 # Old/backup directories
+# =========================
 *_old/
 *_backup/
 client_old/
@@ -63,23 +86,41 @@ server_old/
 shared_old/
 public_old/
 
+# =========================
 # Build artifacts and extracted files
+# =========================
 extracted_json_ld/
 static-site/
 
-# Replit specific (keep configs but exclude bloat)
+# =========================
+# Replit specific
+# =========================
 .replit.bak
 
+# =========================
 # Development artifacts
+# =========================
 *.cache
 .cache/
 coverage/
 .nyc_output/
-
-# Misc development files
 replit_agent/
+
+# =========================
+# Misc development files
+# =========================
 *.html
 !client/index.html
 !public/googlee964abc67dc1d83e.html
 *.md
 !README.md
+# =========================
+# Final Additions for Replit-to-GitHub Safety
+# =========================
+client/public/screenshots/
+public/screenshots/
+*.sqlite
+*.db
+*.db-wal
+*.db-shm
+prisma/migrations/
