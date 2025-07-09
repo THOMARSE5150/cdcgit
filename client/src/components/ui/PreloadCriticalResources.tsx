@@ -25,21 +25,14 @@ export default function PreloadCriticalResources() {
       document.head.appendChild(link);
     };
 
-    // Preload the hero image for faster LCP
-    try {
-      import('../../assets/images/hero_image_canva_optimized.webp').then((module) => {
+    // Preload the WebP hero image
+    import('../../assets/images/hero_image_canva_optimized.webp')
+      .then((module) => {
         preloadImage(module.default);
+      })
+      .catch((error) => {
+        console.warn('Could not preload hero image:', error);
       });
-    } catch (error) {
-      // Fallback to PNG if WebP fails
-      try {
-        import('../../assets/images/hero_image_canva_optimized.png').then((module) => {
-          preloadImage(module.default);
-        });
-      } catch (pngError) {
-        console.warn('Could not preload hero image');
-      }
-    }
 
   }, []);
 
