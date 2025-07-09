@@ -1,6 +1,6 @@
 import React from "react";
-import logoImage from "../../assets/images/header_logo.png";
-import logoCircular from "../../assets/images/cdc_high_res_logo.png";
+import logoImage from '../../../assets/images/header_logo.png';
+import logoCircular from '../../../assets/images/cdc_high_res_logo.png';
 
 interface LogoProps {
   variant?: "default" | "light" | "circular";
